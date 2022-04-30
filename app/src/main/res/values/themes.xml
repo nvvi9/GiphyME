@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.GiphyME.DayNight" parent="Theme.GiphyME" />
+
+    <style name="Theme.GiphyME" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/giphy_blue_700</item>
+        <item name="colorPrimaryVariant">@color/giphy_blue_800</item>
+        <item name="colorSecondary">@color/giphy_orange_500</item>
+        <item name="colorSecondaryVariant">@color/giphy_orange_400</item>
+        <item name="android:colorBackground">@color/giphy_blue_50</item>
+        <item name="colorSurface">@color/giphy_white_50</item>
+        <item name="colorPrimarySurfaceVariant">?attr/colorPrimaryVariant</item>
+        <item name="colorError">@color/giphy_red_400</item>
+        <item name="colorOnPrimary">@color/giphy_white_50</item>
+        <item name="colorOnSecondary">@color/giphy_black_900</item>
+        <item name="colorOnBackground">@color/giphy_black_900</item>
+        <item name="colorOnSurface">@color/giphy_black_900</item>
+        <item name="colorOnError">@color/giphy_black_900</item>
+        <item name="scrimBackground">@color/giphy_white_50_alpha_060</item>
+        <item name="android:statusBarColor">@color/giphy_blue_50_alpha_060</item>
+        <item name="android:navigationBarColor">@color/nav_bar</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.GiphyME.SmallComponent
+        </item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.GiphyME.MediumComponent
+        </item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.GiphyME.LargeComponent
+        </item>
+
+        <item name="textAppearanceHeadline2">@style/TextAppearance.GiphyME.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.GiphyME.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.GiphyME.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.GiphyME.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.GiphyME.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.GiphyME.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.GiphyME.Subtitle2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.GiphyME.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.GiphyME.Body2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.GiphyME.Button</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.GiphyME.Caption</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.GiphyME.Overline</item>
+
+        <item name="emphasisHighAlpha">0.87</item>
+        <item name="emphasisMediumAlpha">0.60</item>
+        <item name="emphasisDisabledAlpha">0.38</item>
+
+        <item name="motionInterpolatorPersistent">@android:interpolator/fast_out_slow_in</item>
+        <item name="motionInterpolatorIncoming">@android:interpolator/decelerate_cubic</item>
+        <item name="motionInterpolatorOutgoing">@android:interpolator/accelerate_cubic</item>
+
+        <item name="bottomAppBarStyle">
+            @style/Widget.MaterialComponents.BottomAppBar.PrimarySurface
+        </item>
+        <item name="bottomSheetStyle">@style/Widget.MaterialComponents.BottomSheet.Modal</item>
+        <item name="navigationViewStyle">@style/Widget.GiphyME.NavigationView</item>
+
+        <item name="android:windowBackground">?android:colorBackground</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+    </style>
+
+    <style name="ThemeOverlay.GiphyME" parent="@style/ThemeOverlay.MaterialComponents.Light">
+        <item name="colorPrimary">@color/giphy_blue_50</item>
+        <item name="colorPrimaryVariant">@color/giphy_white_50</item>
+        <item name="colorSecondary">@color/giphy_orange_500</item>
+        <item name="colorSecondaryVariant">@color/giphy_orange_400</item>
+        <item name="colorOnPrimary">#fff</item>
+    </style>
+</resources>

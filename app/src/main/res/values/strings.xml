@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">GiphyME</string>
+    <string name="gif_item_card_transition_name">youtube_item_card_%1$s</string>
+    <string name="gif">gif</string>
+    <string name="author_avatar">author avatar</string>
+    <string name="search">Search</string>
+    <string name="fill_query">fill query</string>
+    <string name="favorites">Favorites</string>
+    <string name="trending">Trending</string>
+    <string name="remove_from_favorites">Remove from favorites</string>
+    <string name="save">Save</string>
+    <string name="open_in_browser">Open in browser</string>
+    <string name="copy_link_to_clipboard">Copy link to clipboard</string>
+    <string name="error_receiving_favorites">Error while receiving favorite gifs</string>
+    <string name="error_removing_favorites">Error while removing from favorites</string>
+    <string name="error_adding_to_favorites">Error while adding to favorites</string>
+    <string name="removed_from_favorites">"Removed from favorites"</string>
+    <string name="error">Error</string>
+    <string name="added_to_favorites">Added to favorites</string>
+    <string name="copied_to_clipboard">Copied to clipboard</string>
+</resources>

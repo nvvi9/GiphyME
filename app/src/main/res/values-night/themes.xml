@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.GiphyME.DayNight" parent="Theme.GiphyME.Dark" />
+
+    <style name="Theme.GiphyME.Dark" parent="Theme.GiphyME">
+        <item name="colorPrimary">@color/giphy_blue_200</item>
+        <item name="colorPrimaryVariant">@color/giphy_blue_300</item>
+        <item name="colorSecondary">@color/giphy_orange_300</item>
+        <item name="colorSecondaryVariant">@color/giphy_orange_300</item>
+        <item name="android:colorBackground">@color/giphy_black_900</item>
+        <item name="colorSurface">@color/giphy_black_800</item>
+        <item name="colorPrimarySurfaceVariant">?attr/colorSurface</item>
+        <item name="colorError">@color/giphy_red_200</item>
+        <item name="colorOnPrimary">@color/giphy_black_900</item>
+        <item name="colorOnSecondary">@color/giphy_black_900</item>
+        <item name="colorOnBackground">@color/giphy_white_50</item>
+        <item name="colorOnSurface">@color/giphy_white_50</item>
+        <item name="colorOnError">@color/giphy_black_900</item>
+        <item name="scrimBackground">@color/giphy_black_900_alpha_087</item>
+        <item name="android:statusBarColor">@color/giphy_black_900_alpha_060</item>
+        <item name="elevationOverlayEnabled">true</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">false</item>
+    </style>
+</resources>

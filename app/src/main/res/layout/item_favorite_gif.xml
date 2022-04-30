@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="listener"
+            type="com.nvvi9.giphyme.ui.listeners.FavoriteGifItemListener" />
+
+        <variable
+            name="gifItem"
+            type="com.nvvi9.giphyme.vo.FavoriteGifItem" />
+    </data>
+
+    <FrameLayout
+        android:id="@+id/gif_item_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="4dp"
+        android:layout_marginVertical="2dp"
+        android:background="?attr/colorSecondary">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/gif_item_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:elevation="0dp"
+            android:focusable="true"
+            android:onClick="@{() -> listener.onItemClick(gifItem)}"
+            android:onLongClick="@{() -> listener.onItemLongClick(gifItem)}">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/gif_item_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/gif_image_view"
+                    android:layout_width="112dp"
+                    android:layout_height="0dp"
+                    android:contentDescription="@string/gif"
+                    android:scaleType="centerCrop"
+                    app:gifUrl="@{gifItem.gifUrl}"
+                    app:layout_constraintDimensionRatio="H,4:3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@{gifItem.title}"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/gif_image_view"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Gif title" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/author_avatar_card"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:visibility="@{gifItem.authorAvatarUrl != null ? View.VISIBLE : View.GONE}"
+                    app:cardCornerRadius="18dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/title"
+                    app:layout_constraintTop_toBottomOf="@id/title">
+
+                    <ImageView
+                        android:id="@+id/author_avatar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/author_avatar"
+                        android:scaleType="centerCrop"
+                        app:imageUrl="@{gifItem.authorAvatarUrl}"
+                        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/author_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:paddingHorizontal="8dp"
+                    android:text="@{gifItem.authorName}"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    app:layout_constraintBottom_toBottomOf="@id/author_avatar_card"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/author_avatar_card"
+                    app:layout_constraintTop_toTopOf="@id/author_avatar_card"
+                    tools:text="author" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+    </FrameLayout>
+
+</layout>
